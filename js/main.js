@@ -37,8 +37,6 @@
 	};
 	loader();
 
-	// Scrollax
-   $.Scrollax();
 
 
 
