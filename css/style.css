@@ -9764,3 +9764,48 @@ textarea.form-control {
 .ftco-about.img.ftco-section.ftco-no-pb{
 	padding: 1px;
 }
+
+.hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 4;
+    mix-blend-mode: screen;
+    background: radial-gradient(circle at 50% 50%,
+        rgba(255,0,150,0.35),
+        rgba(255,0,150,0)
+    );
+    filter: blur(60px);
+    animation: glowMove 8s infinite linear, glowColor 6s infinite alternate;
+}
+
+/* Movement animation */
+@keyframes glowMove {
+    0% { background-position: 30% 30%; }
+    25% { background-position: 80% 20%; }
+    50% { background-position: 60% 80%; }
+    75% { background-position: 20% 70%; }
+    100% { background-position: 30% 30%; }
+}
+
+/* Color-changing animation */
+@keyframes glowColor {
+    0% {
+        background: radial-gradient(circle at 50% 50%,
+            rgba(255,0,150,0.35),
+            rgba(255,0,150,0)
+        );
+    }
+    50% {
+        background: radial-gradient(circle at 50% 50%,
+            rgba(0,150,255,0.35),
+            rgba(0,150,255,0)
+        );
+    }
+    100% {
+        background: radial-gradient(circle at 50% 50%,
+            rgba(0,255,150,0.35),
+            rgba(0,255,150,0)
+        );
+    }
+}
